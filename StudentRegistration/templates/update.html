@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-4 offset-2">
+
+    <h5 class="text-center alert alert-info">Update Student Information</h5>
+
+    <form action="" method="POST">
+    {%  csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success" value="Update">
+    <a href="{% url 'entryandshow' %}" class= btn btn-success> Back to home</a>
+    </form>
+    </div>
+</div>
+{% endblock content %}
